@@ -1,0 +1,8 @@
+---
+- name: install vagrant
+  sudo: yes
+  action: apt pkg="{{item}}" state=present update_cache=yes
+  with_items:
+      - "{{vagrant_package_name}}"
+  tags: vagrant
+
